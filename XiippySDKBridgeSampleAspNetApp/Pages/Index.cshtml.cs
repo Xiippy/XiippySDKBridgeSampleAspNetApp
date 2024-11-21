@@ -86,14 +86,14 @@ namespace XiippySDKBridgeSampleAspNetApp.Pages
                     {
                         CityOrSuburb = "Brisbane",
                         Country = "Australia",
-                        FullName = "Full Name",
+                        FullName = "Full StatementID",
                         Line1 = "100 Queen St",
                         PhoneNumber = "+61400000000",
                         PostalCode = "4000",
                         StateOrPrivince = "Qld"
                     },
                     CustomerEmail = "dont@contact.me",
-                    CustomerName = "Full Name",
+                    CustomerName = "Full StatementID",
                     CustomerPhone = "+61400000000"
 
                 },
@@ -172,6 +172,10 @@ namespace XiippySDKBridgeSampleAspNetApp.Pages
             Debug.WriteLine($"The payment page can not be browsed at '{FullPaymentPageUrl}'");
             return FullPaymentPageUrl;
         }
+
+
+
+
 
     }
 }

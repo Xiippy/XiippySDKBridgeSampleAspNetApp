@@ -1,1 +1,2 @@
 # XiippySDKBridgeSampleAspNetApp
+Open the folder in Visual Studio code, follow the instructions at https://xiippydocs.gitbook.io for the initial setup and creating the config items, set Merchant Group ID, Merchant ID, Secret Key and Base Address, and debug, then debug the solution
