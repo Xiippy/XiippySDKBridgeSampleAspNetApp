@@ -10,7 +10,8 @@
 
 
 
-    @{if (!string.IsNullOrEmpty(Model.ErrorText))
+    @{
+        if (!string.IsNullOrEmpty(Model.ErrorText))
         {
             <div class="alert alert-danger alert-dismissible fade show text-break" role="alert">
                 <p><strong>Error</strong></p>
@@ -27,6 +28,28 @@
 
     <div id="frameContainer" style="width:100%; margin:0 auto 0 auto; min-height:300"></div>
     <div id="diverror" style="width:100%; margin:0 auto 0 auto;"></div>
+
+
+    @{
+        if (!string.IsNullOrEmpty(Model.StatementID))
+        {
+            <div class="mt-3">
+                <h5>StatementID</h5>
+                <p>@Model.StatementID</p>
+            </div>
+        }
+    }
+
+
+    @{
+        if (!string.IsNullOrEmpty(Model.StatementTimeStamp))
+        {
+            <div class="mt-3">
+                <h5>Statement Timestamp</h5>
+                <p>@Model.StatementTimeStamp</p>
+            </div>
+        }
+    }
 
     <script src="https://cdn.xiippy.ai/PaymentScripts/app.XiippyFrameSDK.bundle.js"></script>
     <script>

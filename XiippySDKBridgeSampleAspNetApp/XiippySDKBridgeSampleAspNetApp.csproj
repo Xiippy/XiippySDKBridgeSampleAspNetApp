@@ -4,9 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Xiippy.POSeComSDK.Light" Version="1.1.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Xiippy.POSeComSDK.Light" Version="1.2.0" />
+	</ItemGroup>
 
 
 </Project>

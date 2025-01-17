@@ -24,6 +24,15 @@ namespace XiippySDKBridgeSampleAspNetApp.Pages
 
 
 
+        
+        public string StatementID { get; set; }
+
+       
+        public string StatementTimeStamp { get; set; }
+
+
+
+
 
         [BindProperty]
         public string XiippyFrameUrl { get; set; }
@@ -68,8 +77,9 @@ namespace XiippySDKBridgeSampleAspNetApp.Pages
         public async Task<string> InitiatePaymentAndGetiFrameUrlAsync()
         {
             // depending on the basket, shipping and billing address entered, as well as amounts, the payment is initialized:
-            string StatementID = Guid.NewGuid().ToString();
+            StatementID = Guid.NewGuid().ToString();
             string UniqueStatementID = Guid.NewGuid().ToString();
+            StatementTimeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             PaymentProcessingRequest req = new PaymentProcessingRequest
             {
                 MerchantGroupID = config.MerchantGroupID,
@@ -103,7 +113,7 @@ namespace XiippySDKBridgeSampleAspNetApp.Pages
                     UniqueStatementID = UniqueStatementID,
                     RandomStatementID = StatementID,
                     StatementCreationDate = DateTime.Now.ToUniversalTime().Ticks.ToString(),
-                    StatementTimeStamp = DateTime.Now.ToString("yyyyMMddHHmmss"),
+                    StatementTimeStamp = StatementTimeStamp,
 
                     Description = "Test transaction #1",
                     DetailsInBodyBeforeItems = "Description on the receipt before items",
